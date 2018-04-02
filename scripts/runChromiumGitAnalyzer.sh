@@ -2,10 +2,34 @@
 
 # Define pathes for this tool and Chromium source.
 CHROMIUM_PATH=$HOME/chromium/Chromium
-OUTPUT_PATH=$HOME/chromium-stats-tool/lge-cr-stats
-GIT_STATS_PATH=$HOME/chromium-stats-tool/lge_git_stats/bin/git_stats
+OUTPUT_PATH=$HOME/github/cr-stats-per-company/cr-stats-per-companies
+GIT_STATS_PATH=$HOME/github/cr-stats-per-company/cr-stats-tool/bin/git_stats
 
+export CHROMIUM_EMAIL="@chromium.org"
+export GOOGLE_EMAIL="@google.com"
+export WEBKIT_EMAIL="@webkit.org"
+export APPLE_EMAIL="@apple.com"
+export OPERA_EMAIL="@opera.com"
+export SAMSUNG_EMAIL="@samsung.com"
+export INTEL_EMAIL="@intel.com"
+export GMAIL_EMAIL="@gmail.com"
+export NOKIA_EMAIL="@nokia.com"
+export YANDEX_EMAIL="@yandex.com"
+export IGALIA_EMAIL="@igalia.com"
+export ADOBE_EMAIL="@adobe.com"
+export AMAZON_EMAIL="@amazon.com"
+export NVIDIA_EMAIL="@nvidia.com"
+export NAVER_EMAIL="@naver.com"
 export LGE_EMAIL="@lge.com"
+export CISCO_EMAIL="@cisco.com"
+export TENCENT_EMAIL="@tencent.com"
+export ARM_EMAIL="@arm.com"
+export COLLABORA_EMAIL="@collabora.com"
+export NETFLIX_EMAIL="@netflix.com"
+export HUAWEI_EMAIL="@huawei.com"
+export IBM_EMAIL="@ca.ibm.com"
+export AMD_EMAIL="@amd.com"
+export IBM_EMAIL="@ca.ibm.com"
 
 while :
 do
@@ -23,9 +47,9 @@ do
     # Start to analyze commit counts.
     now="$(date +'%Y-%m-%d')"
     timestamp=$(date +"%T")
-    echo "[$timestamp] Starting checking LGE commits until $now, please wait..."
+    echo "[$timestamp] Starting checking company commits until $now, please wait..."
     git filter-branch -f --commit-filter '
-        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$LGE_EMAIL";
+        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$WEBKIT_EMAIL\|$APPLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$NOKIA_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$IBM_EMAIL";
         then
             git commit-tree "$@";
         else
@@ -33,7 +57,7 @@ do
         fi' HEAD
 
     timestamp=$(date +"%T")
-    echo "[$timestamp] Finish to find LGE commits."
+    echo "[$timestamp] Finish to find each company commits."
 
     $GIT_STATS_PATH generate -p $CHROMIUM_PATH -o $OUTPUT_PATH
 
