@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitStats - Chromium</title>
+<meta charset='utf-8'>
+<link href='../../../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<style>
+body {
+   padding-top: 60px;
+   font-family: "Trebuchet MS","Bitstream Vera Sans", "DejaVu Sans", "Luxi Sans","Lucida Grande", Helvetica, Verdana, Arial,sans-serif;
+   font-size: 12px;
+   background-color:#fdfdfd;
+}
+.navbar {
+  font-size: 16px;
+}
+.navbar .nav>li>a {
+  float: none;
+  padding: 10px 10px 10px;
+  color: #eee;
+  text-decoration: none;
+  text-shadow: none;
+}
+.navbar .nav>li>a:hover {
+  color: #ff9900;
+}
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+  -webkit-border-radius: 3px;
+  color: #555;
+  padding: 5px 10px 5px;
+  margin: 5px 10px 5px;
+  text-decoration: none;
+  background-color: #ccc;
+}
+.navbar .brand {
+  -webkit-border-radius: 3px;
+  background: #FF9900;
+  color: #404040;
+  display: block;
+  float: left;
+  padding: 5px 15px 5px;
+  margin: 5px 15px 5px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  /* color: white; */
+  text-shadow: none;
+}
+.navbar-inner {
+  background: #404040;
+}
+.tabs-left .nav-tabs {
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #ddd;
+}
+a {
+  color: #666666;
+}
+a:hover {
+  color: #ff9900;
+}
+</style>
+<link href='../../../assets/bootstrap/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+<script src='../../../assets/jquery.min.js' type='text/javascript'></script>
+<script src='../../../assets/bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+<script src='../../../assets/highstock.js' type='text/javascript'></script>
+<script src='../../../assets/exporting.js' type='text/javascript'></script>
+<script src='../../../assets/export-csv.js' type='text/javascript'></script>
+</head>
+<body>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='../../../index.html'>GitStats - Chromium</a>
+<div class='nav-collapse collapse'>
+<ul class='nav'>
+<li class=''>
+<a href='../../../general.html'>General</a>
+</li>
+<li class='active'>
+<a href='../../../activity/by_date.html'>Activity</a>
+</li>
+<li class='active'>
+<a href='../../lge_authors.html'>Authors</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='tabbable tabs-left'>
+<ul class='nav nav-tabs'>
+<li class=''>
+<a href='by_date.html'>Activity by date</a>
+</li>
+<li class=''>
+<a href='hour_of_day.html'>Hour of day</a>
+</li>
+<li class=''>
+<a href='day_of_week.html'>Day of week</a>
+</li>
+<li class=''>
+<a href='hour_of_week.html'>Hour of week</a>
+</li>
+<li class=''>
+<a href='month_of_year.html'>Month of year</a>
+</li>
+<li class=''>
+<a href='year.html'>Year</a>
+</li>
+<li class='active'>
+<a href='year_month.html'>Year and month</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active'>
+<div class='page-header pagination-centered'>
+<h1>Year and month</h1>
+<h3>WebKit.org &lt;foo@webkit.org&gt;</h3>
+</div>
+</div>
+<table class='table table-condensed'>
+<tr>
+<th></th>
+<th>Jan</th>
+<th>Feb</th>
+<th>Mar</th>
+<th>Apr</th>
+<th>May</th>
+<th>Jun</th>
+<th>Jul</th>
+<th>Aug</th>
+<th>Sep</th>
+<th>Oct</th>
+<th>Nov</th>
+<th>Dec</th>
+</tr>
+<tr>
+<th>2007</th>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>208</td>
+<td>208</td>
+</tr>
+<tr>
+<th>2008</th>
+<td>301</td>
+<td>148</td>
+<td>153</td>
+<td>341</td>
+<td>202</td>
+<td>231</td>
+<td>158</td>
+<td>190</td>
+<td>234</td>
+<td>254</td>
+<td>335</td>
+<td>290</td>
+</tr>
+<tr>
+<th>2009</th>
+<td>298</td>
+<td>245</td>
+<td>248</td>
+<td>250</td>
+<td>444</td>
+<td>411</td>
+<td>545</td>
+<td>547</td>
+<td>515</td>
+<td>691</td>
+<td>618</td>
+<td>646</td>
+</tr>
+<tr>
+<th>2010</th>
+<td>682</td>
+<td>601</td>
+<td>729</td>
+<td>832</td>
+<td>753</td>
+<td>819</td>
+<td>781</td>
+<td>851</td>
+<td>825</td>
+<td>794</td>
+<td>589</td>
+<td>658</td>
+</tr>
+<tr>
+<th>2011</th>
+<td>729</td>
+<td>889</td>
+<td>878</td>
+<td>929</td>
+<td>813</td>
+<td>1022</td>
+<td>792</td>
+<td>800</td>
+<td>898</td>
+<td>1013</td>
+<td>1094</td>
+<td>890</td>
+</tr>
+<tr>
+<th>2012</th>
+<td>956</td>
+<td>1168</td>
+<td>1306</td>
+<td>996</td>
+<td>1338</td>
+<td>1084</td>
+<td>1089</td>
+<td>1305</td>
+<td>1117</td>
+<td>1287</td>
+<td>1224</td>
+<td>771</td>
+</tr>
+<tr>
+<th>2013</th>
+<td>923</td>
+<td>868</td>
+<td>877</td>
+<td>61</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</table>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

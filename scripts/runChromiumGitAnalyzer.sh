@@ -14,12 +14,12 @@ export SAMSUNG_EMAIL="@samsung.com"
 export INTEL_EMAIL="@intel.com"
 export GMAIL_EMAIL="@gmail.com"
 export NOKIA_EMAIL="@nokia.com"
-export YANDEX_EMAIL="@yandex.com"
+export YANDEX_EMAIL="@yandex-team.ru"
 export IGALIA_EMAIL="@igalia.com"
 export ADOBE_EMAIL="@adobe.com"
 export AMAZON_EMAIL="@amazon.com"
 export NVIDIA_EMAIL="@nvidia.com"
-export NAVER_EMAIL="@naver.com"
+export NAVER_EMAIL="@navercorp.com"
 export LGE_EMAIL="@lge.com"
 export CISCO_EMAIL="@cisco.com"
 export TENCENT_EMAIL="@tencent.com"
@@ -49,7 +49,7 @@ do
     timestamp=$(date +"%T")
     echo "[$timestamp] Starting checking company commits until $now, please wait..."
     git filter-branch -f --commit-filter '
-        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$WEBKIT_EMAIL\|$APPLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$NOKIA_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$IBM_EMAIL";
+        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$WEBKIT_EMAIL\|$APPLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$NOKIA_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\|$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$IBM_EMAIL";
         then
             git commit-tree "$@";
         else

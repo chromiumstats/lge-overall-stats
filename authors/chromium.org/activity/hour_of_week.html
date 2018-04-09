@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitStats - Chromium</title>
+<meta charset='utf-8'>
+<link href='../../../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<style>
+body {
+   padding-top: 60px;
+   font-family: "Trebuchet MS","Bitstream Vera Sans", "DejaVu Sans", "Luxi Sans","Lucida Grande", Helvetica, Verdana, Arial,sans-serif;
+   font-size: 12px;
+   background-color:#fdfdfd;
+}
+.navbar {
+  font-size: 16px;
+}
+.navbar .nav>li>a {
+  float: none;
+  padding: 10px 10px 10px;
+  color: #eee;
+  text-decoration: none;
+  text-shadow: none;
+}
+.navbar .nav>li>a:hover {
+  color: #ff9900;
+}
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+  -webkit-border-radius: 3px;
+  color: #555;
+  padding: 5px 10px 5px;
+  margin: 5px 10px 5px;
+  text-decoration: none;
+  background-color: #ccc;
+}
+.navbar .brand {
+  -webkit-border-radius: 3px;
+  background: #FF9900;
+  color: #404040;
+  display: block;
+  float: left;
+  padding: 5px 15px 5px;
+  margin: 5px 15px 5px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  /* color: white; */
+  text-shadow: none;
+}
+.navbar-inner {
+  background: #404040;
+}
+.tabs-left .nav-tabs {
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #ddd;
+}
+a {
+  color: #666666;
+}
+a:hover {
+  color: #ff9900;
+}
+</style>
+<link href='../../../assets/bootstrap/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+<script src='../../../assets/jquery.min.js' type='text/javascript'></script>
+<script src='../../../assets/bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+<script src='../../../assets/highstock.js' type='text/javascript'></script>
+<script src='../../../assets/exporting.js' type='text/javascript'></script>
+<script src='../../../assets/export-csv.js' type='text/javascript'></script>
+</head>
+<body>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='../../../index.html'>GitStats - Chromium</a>
+<div class='nav-collapse collapse'>
+<ul class='nav'>
+<li class=''>
+<a href='../../../general.html'>General</a>
+</li>
+<li class='active'>
+<a href='../../../activity/by_date.html'>Activity</a>
+</li>
+<li class='active'>
+<a href='../../lge_authors.html'>Authors</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='tabbable tabs-left'>
+<ul class='nav nav-tabs'>
+<li class=''>
+<a href='by_date.html'>Activity by date</a>
+</li>
+<li class=''>
+<a href='hour_of_day.html'>Hour of day</a>
+</li>
+<li class=''>
+<a href='day_of_week.html'>Day of week</a>
+</li>
+<li class='active'>
+<a href='hour_of_week.html'>Hour of week</a>
+</li>
+<li class=''>
+<a href='month_of_year.html'>Month of year</a>
+</li>
+<li class=''>
+<a href='year.html'>Year</a>
+</li>
+<li class=''>
+<a href='year_month.html'>Year and month</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active'>
+<div class='page-header pagination-centered'>
+<h1>Hour of week</h1>
+<h3>Chromium.org &lt;foo@chromium.org&gt;</h3>
+</div>
+</div>
+<table class='table table-condensed'>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+<th>19</th>
+<th>20</th>
+<th>21</th>
+<th>22</th>
+<th>23</th>
+</tr>
+<tr>
+<th>Sun</th>
+<td style='background-color: #f7f7f7;'>489</td>
+<td style='background-color: #fafafa;'>335</td>
+<td style='background-color: #fafafa;'>335</td>
+<td style='background-color: #fafafa;'>358</td>
+<td style='background-color: #fafafa;'>314</td>
+<td style='background-color: #fbfbfb;'>265</td>
+<td style='background-color: #fbfbfb;'>253</td>
+<td style='background-color: #fcfcfc;'>241</td>
+<td style='background-color: #fcfcfc;'>213</td>
+<td style='background-color: #fbfbfb;'>246</td>
+<td style='background-color: #fcfcfc;'>189</td>
+<td style='background-color: #fcfcfc;'>214</td>
+<td style='background-color: #fcfcfc;'>213</td>
+<td style='background-color: #fcfcfc;'>228</td>
+<td style='background-color: #fbfbfb;'>257</td>
+<td style='background-color: #fafafa;'>323</td>
+<td style='background-color: #f9f9f9;'>414</td>
+<td style='background-color: #f8f8f8;'>455</td>
+<td style='background-color: #f6f6f6;'>557</td>
+<td style='background-color: #f6f6f6;'>579</td>
+<td style='background-color: #f4f4f4;'>723</td>
+<td style='background-color: #f4f4f4;'>713</td>
+<td style='background-color: #f3f3f3;'>757</td>
+<td style='background-color: #f2f2f2;'>805</td>
+</tr>
+<tr>
+<th>Mon</th>
+<td style='background-color: #eeeeee;'>1063</td>
+<td style='background-color: #eaeaea;'>1311</td>
+<td style='background-color: #e8e8e8;'>1457</td>
+<td style='background-color: #e7e7e7;'>1488</td>
+<td style='background-color: #e6e6e6;'>1537</td>
+<td style='background-color: #e3e3e3;'>1711</td>
+<td style='background-color: #e0e0e0;'>1901</td>
+<td style='background-color: #dadada;'>2284</td>
+<td style='background-color: #d2d2d2;'>2757</td>
+<td style='background-color: #cbcbcb;'>3191</td>
+<td style='background-color: #c7c7c7;'>3446</td>
+<td style='background-color: #bdbdbd;'>4046</td>
+<td style='background-color: #c0c0c0;'>3877</td>
+<td style='background-color: #bababa;'>4219</td>
+<td style='background-color: #b7b7b7;'>4412</td>
+<td style='background-color: #b2b2b2;'>4700</td>
+<td style='background-color: #aeaeae;'>4955</td>
+<td style='background-color: #aaaaaa;'>5190</td>
+<td style='background-color: #acacac;'>5059</td>
+<td style='background-color: #b0b0b0;'>4862</td>
+<td style='background-color: #b1b1b1;'>4784</td>
+<td style='background-color: #b1b1b1;'>4755</td>
+<td style='background-color: #b4b4b4;'>4585</td>
+<td style='background-color: #b5b5b5;'>4516</td>
+</tr>
+<tr>
+<th>Tue</th>
+<td style='background-color: #b5b5b5;'>4533</td>
+<td style='background-color: #bbbbbb;'>4141</td>
+<td style='background-color: #c9c9c9;'>3315</td>
+<td style='background-color: #cdcdcd;'>3050</td>
+<td style='background-color: #d2d2d2;'>2788</td>
+<td style='background-color: #d2d2d2;'>2766</td>
+<td style='background-color: #cecece;'>2984</td>
+<td style='background-color: #cacaca;'>3257</td>
+<td style='background-color: #c1c1c1;'>3783</td>
+<td style='background-color: #bababa;'>4197</td>
+<td style='background-color: #b6b6b6;'>4452</td>
+<td style='background-color: #b3b3b3;'>4639</td>
+<td style='background-color: #b6b6b6;'>4469</td>
+<td style='background-color: #b4b4b4;'>4601</td>
+<td style='background-color: #aeaeae;'>4941</td>
+<td style='background-color: #a9a9a9;'>5284</td>
+<td style='background-color: #a2a2a2;'>5663</td>
+<td style='background-color: #9e9e9e;'>5929</td>
+<td style='background-color: #a2a2a2;'>5686</td>
+<td style='background-color: #a7a7a7;'>5370</td>
+<td style='background-color: #ababab;'>5114</td>
+<td style='background-color: #aaaaaa;'>5185</td>
+<td style='background-color: #acacac;'>5062</td>
+<td style='background-color: #afafaf;'>4916</td>
+</tr>
+<tr>
+<th>Wed</th>
+<td style='background-color: #afafaf;'>4923</td>
+<td style='background-color: #b8b8b8;'>4340</td>
+<td style='background-color: #c4c4c4;'>3612</td>
+<td style='background-color: #cccccc;'>3153</td>
+<td style='background-color: #cacaca;'>3271</td>
+<td style='background-color: #cdcdcd;'>3067</td>
+<td style='background-color: #cacaca;'>3250</td>
+<td style='background-color: #c9c9c9;'>3300</td>
+<td style='background-color: #c2c2c2;'>3718</td>
+<td style='background-color: #b7b7b7;'>4430</td>
+<td style='background-color: #b7b7b7;'>4425</td>
+<td style='background-color: #b3b3b3;'>4640</td>
+<td style='background-color: #b5b5b5;'>4538</td>
+<td style='background-color: #b1b1b1;'>4753</td>
+<td style='background-color: #a8a8a8;'>5299</td>
+<td style='background-color: #a7a7a7;'>5374</td>
+<td style='background-color: #a1a1a1;'>5766</td>
+<td style='background-color: #9b9b9b;'>6078</td>
+<td style='background-color: #a1a1a1;'>5717</td>
+<td style='background-color: #a4a4a4;'>5535</td>
+<td style='background-color: #a6a6a6;'>5468</td>
+<td style='background-color: #a7a7a7;'>5358</td>
+<td style='background-color: #ababab;'>5130</td>
+<td style='background-color: #aeaeae;'>4982</td>
+</tr>
+<tr>
+<th>Thu</th>
+<td style='background-color: #b0b0b0;'>4826</td>
+<td style='background-color: #bbbbbb;'>4188</td>
+<td style='background-color: #c5c5c5;'>3555</td>
+<td style='background-color: #cbcbcb;'>3192</td>
+<td style='background-color: #d0d0d0;'>2892</td>
+<td style='background-color: #cecece;'>2982</td>
+<td style='background-color: #cccccc;'>3150</td>
+<td style='background-color: #c7c7c7;'>3414</td>
+<td style='background-color: #c1c1c1;'>3828</td>
+<td style='background-color: #bcbcbc;'>4102</td>
+<td style='background-color: #b8b8b8;'>4348</td>
+<td style='background-color: #b1b1b1;'>4755</td>
+<td style='background-color: #b0b0b0;'>4804</td>
+<td style='background-color: #b1b1b1;'>4798</td>
+<td style='background-color: #acacac;'>5067</td>
+<td style='background-color: #aaaaaa;'>5220</td>
+<td style='background-color: #a4a4a4;'>5577</td>
+<td style='background-color: #9e9e9e;'>5923</td>
+<td style='background-color: #9d9d9d;'>6008</td>
+<td style='background-color: #a8a8a8;'>5333</td>
+<td style='background-color: #a6a6a6;'>5466</td>
+<td style='background-color: #aaaaaa;'>5216</td>
+<td style='background-color: #ababab;'>5165</td>
+<td style='background-color: #afafaf;'>4917</td>
+</tr>
+<tr>
+<th>Fri</th>
+<td style='background-color: #b4b4b4;'>4606</td>
+<td style='background-color: #bababa;'>4227</td>
+<td style='background-color: #c6c6c6;'>3513</td>
+<td style='background-color: #cfcfcf;'>2952</td>
+<td style='background-color: #cfcfcf;'>2970</td>
+<td style='background-color: #d1d1d1;'>2849</td>
+<td style='background-color: #d1d1d1;'>2812</td>
+<td style='background-color: #cacaca;'>3258</td>
+<td style='background-color: #c5c5c5;'>3567</td>
+<td style='background-color: #bebebe;'>4011</td>
+<td style='background-color: #bababa;'>4220</td>
+<td style='background-color: #b4b4b4;'>4604</td>
+<td style='background-color: #b8b8b8;'>4371</td>
+<td style='background-color: #b4b4b4;'>4570</td>
+<td style='background-color: #b4b4b4;'>4609</td>
+<td style='background-color: #aeaeae;'>4981</td>
+<td style='background-color: #a9a9a9;'>5234</td>
+<td style='background-color: #aaaaaa;'>5219</td>
+<td style='background-color: #afafaf;'>4923</td>
+<td style='background-color: #b4b4b4;'>4572</td>
+<td style='background-color: #b5b5b5;'>4501</td>
+<td style='background-color: #b8b8b8;'>4351</td>
+<td style='background-color: #bababa;'>4215</td>
+<td style='background-color: #bebebe;'>3962</td>
+</tr>
+<tr>
+<th>Sat</th>
+<td style='background-color: #c6c6c6;'>3485</td>
+<td style='background-color: #d5d5d5;'>2555</td>
+<td style='background-color: #e2e2e2;'>1788</td>
+<td style='background-color: #eaeaea;'>1300</td>
+<td style='background-color: #ededed;'>1118</td>
+<td style='background-color: #f0f0f0;'>929</td>
+<td style='background-color: #f2f2f2;'>808</td>
+<td style='background-color: #f5f5f5;'>657</td>
+<td style='background-color: #f6f6f6;'>567</td>
+<td style='background-color: #f8f8f8;'>482</td>
+<td style='background-color: #f8f8f8;'>447</td>
+<td style='background-color: #fafafa;'>354</td>
+<td style='background-color: #f8f8f8;'>451</td>
+<td style='background-color: #f8f8f8;'>438</td>
+<td style='background-color: #f6f6f6;'>555</td>
+<td style='background-color: #f7f7f7;'>489</td>
+<td style='background-color: #f6f6f6;'>597</td>
+<td style='background-color: #f5f5f5;'>639</td>
+<td style='background-color: #f6f6f6;'>600</td>
+<td style='background-color: #f6f6f6;'>564</td>
+<td style='background-color: #f5f5f5;'>642</td>
+<td style='background-color: #f8f8f8;'>466</td>
+<td style='background-color: #f6f6f6;'>559</td>
+<td style='background-color: #f8f8f8;'>455</td>
+</tr>
+</table>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>
