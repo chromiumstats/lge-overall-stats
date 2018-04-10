@@ -2,7 +2,7 @@
 
 # Define pathes for this tool and Chromium source.
 CHROMIUM_PATH=$HOME/chromium/Chromium
-OUTPUT_PATH=$HOME/github/cr-stats-per-company/cr-stats-per-companies
+OUTPUT_PATH=$HOME/github/cr-stats-per-company/cr-stats
 GIT_STATS_PATH=$HOME/github/cr-stats-per-company/cr-stats-tool/bin/git_stats
 
 export CHROMIUM_EMAIL="@chromium.org"
@@ -49,7 +49,7 @@ do
     timestamp=$(date +"%T")
     echo "[$timestamp] Starting checking company commits until $now, please wait..."
     git filter-branch -f --commit-filter '
-        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$WEBKIT_EMAIL\|$APPLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$NOKIA_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\|$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$IBM_EMAIL";
+        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\|$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$IBM_EMAIL";
         then
             git commit-tree "$@";
         else

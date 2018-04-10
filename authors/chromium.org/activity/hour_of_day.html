@@ -87,7 +87,7 @@ a:hover {
 <a href='../../../activity/by_date.html'>Activity</a>
 </li>
 <li class='active'>
-<a href='../../lge_authors.html'>Authors</a>
+<a href='../../company_authors.html'>Authors</a>
 </li>
 </ul>
 </div>
@@ -123,7 +123,7 @@ a:hover {
 <div class='tab-pane active'>
 <div class='page-header pagination-centered'>
 <h1>Hour of day</h1>
-<h3>Chromium.org &lt;foo@chromium.org&gt;</h3>
+<h3>Chromium.org &lt;@chromium.org&gt;</h3>
 </div>
 </div>
 <table class='table table-condensed'>
@@ -156,30 +156,30 @@ a:hover {
 </tr>
 <tr>
 <th>Commits</th>
-<td>23925</td>
-<td>21097</td>
-<td>17575</td>
-<td>15493</td>
-<td>14890</td>
-<td>14569</td>
-<td>15158</td>
-<td>16411</td>
-<td>18433</td>
-<td>20659</td>
-<td>21527</td>
-<td>23252</td>
-<td>22723</td>
-<td>23607</td>
-<td>25140</td>
-<td>26371</td>
-<td>28206</td>
-<td>29433</td>
-<td>28550</td>
-<td>26815</td>
-<td>26698</td>
-<td>26044</td>
-<td>25473</td>
-<td>24553</td>
+<td>23916</td>
+<td>21091</td>
+<td>17565</td>
+<td>15483</td>
+<td>14887</td>
+<td>14559</td>
+<td>15153</td>
+<td>16393</td>
+<td>18421</td>
+<td>20650</td>
+<td>21498</td>
+<td>23240</td>
+<td>22707</td>
+<td>23593</td>
+<td>25126</td>
+<td>26355</td>
+<td>28196</td>
+<td>29414</td>
+<td>28547</td>
+<td>26813</td>
+<td>26696</td>
+<td>26038</td>
+<td>25466</td>
+<td>24544</td>
 </tr>
 <tr>
 <th>Percentage</th>
@@ -192,7 +192,7 @@ a:hover {
 <td>2.8</td>
 <td>3.1</td>
 <td>3.4</td>
-<td>3.8</td>
+<td>3.9</td>
 <td>4.0</td>
 <td>4.3</td>
 <td>4.2</td>
@@ -215,7 +215,7 @@ a:hover {
           var onload = window.onload;
           window.onload = function(){
             if (typeof onload == "function") onload();
-                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Hour" },"categories": "0..23" },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_hour","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by hour","data": [ 23925,21097,17575,15493,14890,14569,15158,16411,18433,20659,21527,23252,22723,23607,25140,26371,28206,29433,28550,26815,26698,26044,25473,24553 ] }] };
+                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Hour" },"categories": "0..23" },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_hour","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by hour","data": [ 23916,21091,17565,15483,14887,14559,15153,16393,18421,20650,21498,23240,22707,23593,25126,26355,28196,29414,28547,26813,26696,26038,25466,24544 ] }] };
         
         window.chart_charts.activity_by_hour = new Highcharts.Chart(options);
 

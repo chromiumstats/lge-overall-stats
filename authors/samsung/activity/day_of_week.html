@@ -87,7 +87,7 @@ a:hover {
 <a href='../../../activity/by_date.html'>Activity</a>
 </li>
 <li class='active'>
-<a href='../../lge_authors.html'>Authors</a>
+<a href='../../company_authors.html'>Authors</a>
 </li>
 </ul>
 </div>
@@ -123,7 +123,7 @@ a:hover {
 <div class='tab-pane active'>
 <div class='page-header pagination-centered'>
 <h1>Day of week</h1>
-<h3>Samsung &lt;foo@samsung.com&gt;</h3>
+<h3>Samsung &lt;@samsung.com&gt;</h3>
 </div>
 </div>
 <table class='table table-condensed'>
@@ -140,7 +140,7 @@ a:hover {
 <tr>
 <th>Commits</th>
 <td>198</td>
-<td>1127</td>
+<td>1128</td>
 <td>1408</td>
 <td>1376</td>
 <td>1286</td>
@@ -164,7 +164,7 @@ a:hover {
           var onload = window.onload;
           window.onload = function(){
             if (typeof onload == "function") onload();
-                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Day" },"categories": [ "Sun","Mon","Tue","Wed","Thu","Fri","Sat" ] },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_wday","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by day of week","data": [ 198,1127,1408,1376,1286,1072,291 ] }] };
+                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Day" },"categories": [ "Sun","Mon","Tue","Wed","Thu","Fri","Sat" ] },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_wday","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by day of week","data": [ 198,1128,1408,1376,1286,1072,291 ] }] };
         
         window.chart_charts.activity_by_wday = new Highcharts.Chart(options);
 
