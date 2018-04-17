@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitStats - Chromium</title>
+<meta charset='utf-8'>
+<link href='../../../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<style>
+body {
+   padding-top: 60px;
+   font-family: "Trebuchet MS","Bitstream Vera Sans", "DejaVu Sans", "Luxi Sans","Lucida Grande", Helvetica, Verdana, Arial,sans-serif;
+   font-size: 12px;
+   background-color:#fdfdfd;
+}
+.navbar {
+  font-size: 16px;
+}
+.navbar .nav>li>a {
+  float: none;
+  padding: 10px 10px 10px;
+  color: #eee;
+  text-decoration: none;
+  text-shadow: none;
+}
+.navbar .nav>li>a:hover {
+  color: #ff9900;
+}
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+  -webkit-border-radius: 3px;
+  color: #555;
+  padding: 5px 10px 5px;
+  margin: 5px 10px 5px;
+  text-decoration: none;
+  background-color: #ccc;
+}
+.navbar .brand {
+  -webkit-border-radius: 3px;
+  background: #FF9900;
+  color: #404040;
+  display: block;
+  float: left;
+  padding: 5px 15px 5px;
+  margin: 5px 15px 5px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  /* color: white; */
+  text-shadow: none;
+}
+.navbar-inner {
+  background: #404040;
+}
+.tabs-left .nav-tabs {
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #ddd;
+}
+a {
+  color: #666666;
+}
+a:hover {
+  color: #ff9900;
+}
+</style>
+<link href='../../../assets/bootstrap/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+<script src='../../../assets/jquery.min.js' type='text/javascript'></script>
+<script src='../../../assets/bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+<script src='../../../assets/highstock.js' type='text/javascript'></script>
+<script src='../../../assets/exporting.js' type='text/javascript'></script>
+<script src='../../../assets/export-csv.js' type='text/javascript'></script>
+</head>
+<body>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='../../../index.html'>GitStats - Chromium</a>
+<div class='nav-collapse collapse'>
+<ul class='nav'>
+<li class=''>
+<a href='../../../general.html'>General</a>
+</li>
+<li class=''>
+<a href='../../../activity/by_date.html'>Activity</a>
+</li>
+<li class='active'>
+<a href='../../company_authors.html'>Authors</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='tabbable tabs-left'>
+<ul class='nav nav-tabs'>
+<li class='active'>
+<a href='commits_by_date.html'>Commits by date</a>
+</li>
+<li class=''>
+<a href='changed_lines_by_date.html'>Changed lines by date</a>
+</li>
+<li class=''>
+<a href='insertions_by_date.html'>Lines added by date</a>
+</li>
+<li class=''>
+<a href='deletions_by_date.html'>Lines deleted by date</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active'>
+<div class='page-header'>
+<h1 class='pagination-centered'>Commits by date</h1>
+</div>
+                <script type="text/javascript">
+        (function() {
+
+          var onload = window.onload;
+          window.onload = function(){
+            if (typeof onload == "function") onload();
+                    var options = { "title": { "text": "" },"legend": { "enabled": true,"layout": "vertical","backgroundColor": "#FFFFFF","align": "left","verticalAlign": "top","x": 100,"y": 70,"floating": true,"shadow": true },"xAxis": { "title": { "text": null } },"yAxis": { "title": { "text": "Lines" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.commits_sum_by_author_by_date" },"subtitle": {  },"series": [{ "name": "chromite-chromium-autoroll@skia-buildbots.google.com.iam.gserviceaccount.com","type": "spline","data": [ [ 1521240601000,1 ],[ 1521254733000,2 ],[ 1521267130000,3 ],[ 1521331200000,3 ],[ 1521437924000,4 ],[ 1521504924000,5 ],[ 1521519254000,6 ],[ 1521525844000,7 ],[ 1521533786000,8 ],[ 1521594888000,9 ],[ 1521614041000,10 ],[ 1521668496000,11 ],[ 1521689105000,12 ],[ 1521718784000,13 ],[ 1521766081000,14 ],[ 1521775415000,15 ],[ 1521819332000,16 ],[ 1521848503000,17 ],[ 1521876209000,18 ],[ 1521963328000,19 ],[ 1522022400000,19 ],[ 1522122341000,20 ],[ 1522128334000,21 ],[ 1522207804000,22 ],[ 1522223138000,23 ],[ 1522272249000,24 ],[ 1522280944000,25 ],[ 1522291494000,26 ],[ 1522303425000,27 ],[ 1522355604000,28 ],[ 1522379153000,29 ],[ 1522391023000,30 ],[ 1522460061000,31 ],[ 1522468918000,32 ],[ 1522483658000,33 ],[ 1522540800000,33 ],[ 1522685436000,34 ],[ 1522712027000,35 ],[ 1522722769000,36 ],[ 1522728947000,37 ],[ 1522741659000,38 ],[ 1522798772000,39 ],[ 1522800000000,39 ],[ 1522935080000,40 ],[ 1522979751000,41 ],[ 1523044418000,42 ],[ 1523064839000,43 ],[ 1523071519000,44 ],[ 1523087969000,45 ],[ 1523145600000,45 ],[ 1523297328000,46 ],[ 1523334977000,47 ],[ 1523434258000,48 ],[ 1523442541000,49 ],[ 1523534213000,50 ],[ 1523575873000,51 ],[ 1523590766000,52 ],[ 1523599055000,53 ],[ 1523620114000,54 ] ] }] };
+        
+        window.chart_charts.commits_sum_by_author_by_date = new Highcharts.StockChart(options);
+
+          };
+                })()
+        </script>
+
+<div id="charts.commits_sum_by_author_by_date"></div>
+<small>
+<center>5 Chromium authors shown by company</center>
+</small>
+</div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

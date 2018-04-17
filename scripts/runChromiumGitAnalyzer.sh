@@ -31,6 +31,10 @@ export IBM_EMAIL="@ca.ibm.com"
 export AMD_EMAIL="@amd.com"
 export IBM_EMAIL="@ca.ibm.com"
 export AKAMAI_EMAIL="@akamai.com"
+export CANONICAL_EMAIL="@canonical.com"
+export BLACKBERRY_EMAIL="@blackberry.com"
+export BLOOMBERG_EMAIL="@bloomberg.net"
+export BRENDANLONG_EMAIL="@brendanlong.com"
 export COUNTER_EMAIL="@commit-counter.org"
 
 while :
@@ -40,7 +44,10 @@ do
     timestamp=$start_timestamp
     echo "[$timestamp] Start updating  Chromium trunk, please wait..."
     cd $CHROMIUM_PATH
-    git pull origin master:master
+    if [ "$1" == --update ];
+    then
+      git pull origin master:master
+    fi
     git subtree add --prefix=v8-log https://chromium.googlesource.com/v8/v8.git master
     git subtree add --prefix=pdfium-log https://pdfium.googlesource.com/pdfium master
     git subtree add --prefix=angle-log https://chromium.googlesource.com/angle/angle.git master
@@ -53,7 +60,7 @@ do
     timestamp=$(date +"%T")
     echo "[$timestamp] Starting checking company commits until $now, please wait..."
     git filter-branch -f --commit-filter '
-        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\|$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$IBM_EMAIL\|$AKAMAI_EMAIL\|$COUNTER_EMAIL";
+        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\|$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$IBM_EMAIL\|$AKAMAI_EMAIL\|$CANONICAL_EMAIL\|$BLACKBERRY_EMAIL\|$BLOOMBERG_EMAIL\|$BRENDANLONG_EMAIL\|$COUNTER_EMAIL";
         then
             git commit-tree "$@";
         else
@@ -67,7 +74,7 @@ do
 
     # Restore master branch
     git reset --hard refs/original/refs/heads/master
-    git reset --hard HEAD~2
+    git reset --hard HEAD~4
 
     # Upload the result to github.
     cd $OUTPUT_PATH

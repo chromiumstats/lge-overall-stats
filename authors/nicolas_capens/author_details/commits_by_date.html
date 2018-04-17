@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitStats - Chromium</title>
+<meta charset='utf-8'>
+<link href='../../../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<style>
+body {
+   padding-top: 60px;
+   font-family: "Trebuchet MS","Bitstream Vera Sans", "DejaVu Sans", "Luxi Sans","Lucida Grande", Helvetica, Verdana, Arial,sans-serif;
+   font-size: 12px;
+   background-color:#fdfdfd;
+}
+.navbar {
+  font-size: 16px;
+}
+.navbar .nav>li>a {
+  float: none;
+  padding: 10px 10px 10px;
+  color: #eee;
+  text-decoration: none;
+  text-shadow: none;
+}
+.navbar .nav>li>a:hover {
+  color: #ff9900;
+}
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+  -webkit-border-radius: 3px;
+  color: #555;
+  padding: 5px 10px 5px;
+  margin: 5px 10px 5px;
+  text-decoration: none;
+  background-color: #ccc;
+}
+.navbar .brand {
+  -webkit-border-radius: 3px;
+  background: #FF9900;
+  color: #404040;
+  display: block;
+  float: left;
+  padding: 5px 15px 5px;
+  margin: 5px 15px 5px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  /* color: white; */
+  text-shadow: none;
+}
+.navbar-inner {
+  background: #404040;
+}
+.tabs-left .nav-tabs {
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #ddd;
+}
+a {
+  color: #666666;
+}
+a:hover {
+  color: #ff9900;
+}
+</style>
+<link href='../../../assets/bootstrap/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+<script src='../../../assets/jquery.min.js' type='text/javascript'></script>
+<script src='../../../assets/bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+<script src='../../../assets/highstock.js' type='text/javascript'></script>
+<script src='../../../assets/exporting.js' type='text/javascript'></script>
+<script src='../../../assets/export-csv.js' type='text/javascript'></script>
+</head>
+<body>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='../../../index.html'>GitStats - Chromium</a>
+<div class='nav-collapse collapse'>
+<ul class='nav'>
+<li class=''>
+<a href='../../../general.html'>General</a>
+</li>
+<li class=''>
+<a href='../../../activity/by_date.html'>Activity</a>
+</li>
+<li class='active'>
+<a href='../../company_authors.html'>Authors</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='tabbable tabs-left'>
+<ul class='nav nav-tabs'>
+<li class='active'>
+<a href='commits_by_date.html'>Commits by date</a>
+</li>
+<li class=''>
+<a href='changed_lines_by_date.html'>Changed lines by date</a>
+</li>
+<li class=''>
+<a href='insertions_by_date.html'>Lines added by date</a>
+</li>
+<li class=''>
+<a href='deletions_by_date.html'>Lines deleted by date</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active'>
+<div class='page-header'>
+<h1 class='pagination-centered'>Commits by date</h1>
+</div>
+                <script type="text/javascript">
+        (function() {
+
+          var onload = window.onload;
+          window.onload = function(){
+            if (typeof onload == "function") onload();
+                    var options = { "title": { "text": "" },"legend": { "enabled": true,"layout": "vertical","backgroundColor": "#FFFFFF","align": "left","verticalAlign": "top","x": 100,"y": 70,"floating": true,"shadow": true },"xAxis": { "title": { "text": null } },"yAxis": { "title": { "text": "Lines" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.commits_sum_by_author_by_date" },"subtitle": {  },"series": [{ "name": "Nicolas Capens","type": "spline","data": [ [ 1370367019000,1 ],[ 1370375747000,2 ],[ 1370442681000,3 ],[ 1370447169000,4 ],[ 1370476800000,4 ],[ 1370563200000,4 ],[ 1370649600000,4 ],[ 1370736000000,4 ],[ 1370822400000,4 ],[ 1370908800000,4 ],[ 1370995200000,4 ],[ 1371081600000,4 ],[ 1371168000000,4 ],[ 1371254400000,4 ],[ 1371340800000,4 ],[ 1371492638000,5 ],[ 1371498623000,6 ],[ 1371500013000,7 ],[ 1371502045000,8 ],[ 1371583918000,9 ],[ 1371606090000,10 ],[ 1371663437000,11 ],[ 1371736311000,12 ],[ 1371736443000,13 ],[ 1371772800000,13 ],[ 1371859200000,13 ],[ 1371945600000,13 ],[ 1372102608000,14 ],[ 1372102761000,15 ],[ 1372102947000,16 ],[ 1372103672000,17 ],[ 1372103779000,18 ],[ 1372103910000,19 ],[ 1372104113000,20 ],[ 1372104176000,21 ],[ 1372104325000,22 ],[ 1372104652000,23 ],[ 1372104696000,24 ],[ 1372104806000,25 ],[ 1372104859000,26 ],[ 1372104983000,27 ],[ 1372118400000,27 ],[ 1372204800000,27 ],[ 1372291200000,27 ],[ 1372377600000,27 ],[ 1372464000000,27 ],[ 1372550400000,27 ],[ 1372636800000,27 ],[ 1372723200000,27 ],[ 1372809600000,27 ],[ 1372896000000,27 ],[ 1372982400000,27 ],[ 1373068800000,27 ],[ 1373155200000,27 ],[ 1373294590000,28 ],[ 1373313398000,29 ],[ 1373380515000,30 ],[ 1373386138000,31 ],[ 1373391988000,32 ],[ 1373482364000,33 ],[ 1373483687000,34 ],[ 1373555434000,35 ],[ 1373556050000,36 ],[ 1373556386000,37 ],[ 1373587200000,37 ],[ 1373673600000,37 ],[ 1373760000000,37 ],[ 1373923578000,38 ],[ 1374005851000,39 ],[ 1374019200000,39 ],[ 1374159682000,40 ],[ 1374161037000,41 ],[ 1374162580000,42 ],[ 1374192000000,42 ],[ 1374278400000,42 ],[ 1374364800000,42 ],[ 1374451200000,42 ],[ 1374537600000,42 ],[ 1374624000000,42 ],[ 1374710400000,42 ],[ 1374796800000,42 ],[ 1374883200000,42 ],[ 1374969600000,42 ],[ 1375056000000,42 ],[ 1375142400000,42 ],[ 1375228800000,42 ],[ 1375315200000,42 ],[ 1375476992000,43 ],[ 1375488000000,43 ],[ 1375574400000,43 ],[ 1375660800000,43 ],[ 1375801150000,44 ],[ 1375833600000,44 ],[ 1375920000000,44 ],[ 1376006400000,44 ],[ 1376092800000,44 ],[ 1376179200000,44 ],[ 1376320206000,45 ],[ 1376352000000,45 ],[ 1376438400000,45 ],[ 1376524800000,45 ],[ 1376611200000,45 ],[ 1376697600000,45 ],[ 1376784000000,45 ],[ 1376870400000,45 ],[ 1376956800000,45 ],[ 1377043200000,45 ],[ 1377129600000,45 ],[ 1377216000000,45 ],[ 1377302400000,45 ],[ 1377388800000,45 ],[ 1377475200000,45 ],[ 1377561600000,45 ],[ 1377648000000,45 ],[ 1377734400000,45 ],[ 1377820800000,45 ],[ 1377907200000,45 ],[ 1377993600000,45 ],[ 1378080000000,45 ],[ 1378166400000,45 ],[ 1378252800000,45 ],[ 1378339200000,45 ],[ 1378425600000,45 ],[ 1378512000000,45 ],[ 1378598400000,45 ],[ 1378684800000,45 ],[ 1378771200000,45 ],[ 1378857600000,45 ],[ 1378944000000,45 ],[ 1379030400000,45 ],[ 1379116800000,45 ],[ 1379203200000,45 ],[ 1379289600000,45 ],[ 1379376000000,45 ],[ 1379462400000,45 ],[ 1379548800000,45 ],[ 1379635200000,45 ],[ 1379721600000,45 ],[ 1379808000000,45 ],[ 1379894400000,45 ],[ 1379980800000,45 ],[ 1380067200000,45 ],[ 1380204367000,46 ] ] }] };
+        
+        window.chart_charts.commits_sum_by_author_by_date = new Highcharts.StockChart(options);
+
+          };
+                })()
+        </script>
+
+<div id="charts.commits_sum_by_author_by_date"></div>
+<small>
+<center>5 Chromium authors shown by company</center>
+</small>
+</div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitStats - Chromium</title>
+<meta charset='utf-8'>
+<link href='../../../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<style>
+body {
+   padding-top: 60px;
+   font-family: "Trebuchet MS","Bitstream Vera Sans", "DejaVu Sans", "Luxi Sans","Lucida Grande", Helvetica, Verdana, Arial,sans-serif;
+   font-size: 12px;
+   background-color:#fdfdfd;
+}
+.navbar {
+  font-size: 16px;
+}
+.navbar .nav>li>a {
+  float: none;
+  padding: 10px 10px 10px;
+  color: #eee;
+  text-decoration: none;
+  text-shadow: none;
+}
+.navbar .nav>li>a:hover {
+  color: #ff9900;
+}
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+  -webkit-border-radius: 3px;
+  color: #555;
+  padding: 5px 10px 5px;
+  margin: 5px 10px 5px;
+  text-decoration: none;
+  background-color: #ccc;
+}
+.navbar .brand {
+  -webkit-border-radius: 3px;
+  background: #FF9900;
+  color: #404040;
+  display: block;
+  float: left;
+  padding: 5px 15px 5px;
+  margin: 5px 15px 5px;
+  margin-left: -20px;
+  font-size: 20px;
+  font-weight: 200;
+  /* color: white; */
+  text-shadow: none;
+}
+.navbar-inner {
+  background: #404040;
+}
+.tabs-left .nav-tabs {
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #ddd;
+}
+a {
+  color: #666666;
+}
+a:hover {
+  color: #ff9900;
+}
+</style>
+<link href='../../../assets/bootstrap/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+<script src='../../../assets/jquery.min.js' type='text/javascript'></script>
+<script src='../../../assets/bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+<script src='../../../assets/highstock.js' type='text/javascript'></script>
+<script src='../../../assets/exporting.js' type='text/javascript'></script>
+<script src='../../../assets/export-csv.js' type='text/javascript'></script>
+</head>
+<body>
+<div class='navbar navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</a>
+<a class='brand' href='../../../index.html'>GitStats - Chromium</a>
+<div class='nav-collapse collapse'>
+<ul class='nav'>
+<li class=''>
+<a href='../../../general.html'>General</a>
+</li>
+<li class=''>
+<a href='../../../activity/by_date.html'>Activity</a>
+</li>
+<li class='active'>
+<a href='../../company_authors.html'>Authors</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='tabbable tabs-left'>
+<ul class='nav nav-tabs'>
+<li class=''>
+<a href='commits_by_date.html'>Commits by date</a>
+</li>
+<li class='active'>
+<a href='changed_lines_by_date.html'>Changed lines by date</a>
+</li>
+<li class=''>
+<a href='insertions_by_date.html'>Lines added by date</a>
+</li>
+<li class=''>
+<a href='deletions_by_date.html'>Lines deleted by date</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active'>
+<div class='page-header'>
+<h1 class='pagination-centered'>Changed lines by date</h1>
+</div>
+                <script type="text/javascript">
+        (function() {
+
+          var onload = window.onload;
+          window.onload = function(){
+            if (typeof onload == "function") onload();
+                    var options = { "title": { "text": "" },"legend": { "enabled": true,"layout": "vertical","backgroundColor": "#FFFFFF","align": "left","verticalAlign": "top","x": 100,"y": 70,"floating": true,"shadow": true },"xAxis": { "title": { "text": null } },"yAxis": { "title": { "text": "Lines" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.changed_lines_by_author_by_date" },"subtitle": {  },"series": [{ "name": "shannon.woods%transgaming.com@gtempaccount.com","type": "spline","data": [ [ 1365823646000,13 ],[ 1365823653000,54 ],[ 1365823660000,60 ],[ 1365823667000,119 ],[ 1365823677000,122 ],[ 1365823683000,126 ],[ 1365823689000,172 ],[ 1365823695000,199 ],[ 1365823703000,201 ],[ 1365823709000,282 ],[ 1365823716000,553 ],[ 1365823723000,788 ],[ 1365823734000,831 ],[ 1365823742000,1439 ],[ 1365823753000,2613 ],[ 1365823768000,5232 ],[ 1365823776000,5304 ],[ 1365823786000,5311 ],[ 1365823792000,5312 ],[ 1365823801000,5332 ],[ 1365823812000,5354 ],[ 1365823818000,5373 ],[ 1365823826000,5506 ],[ 1365823862000,5570 ],[ 1365823876000,5633 ],[ 1365823883000,5658 ],[ 1365823891000,5888 ],[ 1365823900000,5904 ],[ 1365823908000,5909 ],[ 1365823915000,5948 ],[ 1365823923000,6000 ],[ 1365823932000,6215 ],[ 1365823977000,6321 ],[ 1365823984000,6591 ],[ 1365823991000,6601 ],[ 1365824002000,6676 ],[ 1365824010000,6712 ],[ 1365824018000,6751 ],[ 1365824025000,6758 ],[ 1365824033000,6936 ],[ 1365824040000,7019 ],[ 1365824047000,7035 ],[ 1365824054000,7043 ],[ 1365824062000,7050 ],[ 1365824076000,7458 ],[ 1365824085000,7466 ],[ 1365824092000,7476 ],[ 1365824098000,7484 ],[ 1365824106000,7503 ],[ 1365824113000,7537 ],[ 1365824119000,7539 ],[ 1365824125000,7553 ],[ 1365824132000,7607 ],[ 1365824141000,7624 ],[ 1365824203000,7690 ],[ 1365824211000,7718 ],[ 1365824217000,7779 ],[ 1365824224000,7870 ],[ 1365824229000,7887 ],[ 1365824235000,7891 ],[ 1365824240000,7905 ],[ 1365824247000,7961 ],[ 1365824254000,8123 ],[ 1365824264000,8265 ],[ 1365824273000,8406 ],[ 1365824280000,8430 ],[ 1365824287000,8528 ],[ 1365824296000,11298 ],[ 1365824306000,12470 ],[ 1365824313000,12532 ],[ 1365824319000,12826 ],[ 1365824326000,12852 ],[ 1365824332000,12854 ],[ 1365824338000,12860 ],[ 1365824344000,13024 ],[ 1365824350000,13093 ],[ 1365824358000,13161 ],[ 1365824364000,13200 ],[ 1365824372000,13213 ],[ 1365824379000,13298 ],[ 1365824384000,13334 ],[ 1365824392000,13368 ],[ 1365824398000,13450 ],[ 1365824404000,13624 ],[ 1365824410000,13762 ],[ 1365824417000,13853 ],[ 1365824422000,14225 ],[ 1365824430000,14245 ],[ 1365824436000,14327 ],[ 1365824444000,14342 ],[ 1365824450000,14360 ],[ 1365824456000,14488 ],[ 1365824461000,14578 ],[ 1365824467000,14620 ],[ 1365824475000,16027 ],[ 1365824483000,16033 ],[ 1365824489000,16050 ],[ 1365824493000,16052 ],[ 1365824499000,16127 ],[ 1365824505000,16211 ],[ 1365824513000,16231 ],[ 1365824520000,16235 ],[ 1365824527000,16262 ],[ 1365824539000,16330 ],[ 1365824550000,17459 ],[ 1365824564000,17582 ],[ 1365824570000,17851 ],[ 1365824587000,17941 ],[ 1365824597000,18077 ],[ 1365824606000,18166 ],[ 1365824645000,18268 ],[ 1365824673000,18293 ],[ 1365824681000,18370 ],[ 1365824691000,18422 ],[ 1365824698000,18922 ],[ 1365824705000,18992 ],[ 1365824712000,19048 ],[ 1365824717000,19788 ],[ 1365824724000,19805 ],[ 1365824730000,19854 ],[ 1365824739000,20058 ],[ 1365824745000,20241 ],[ 1365824757000,20277 ],[ 1365824767000,20821 ],[ 1365824774000,20884 ],[ 1365824781000,20929 ],[ 1365825393000,20931 ] ] }] };
+        
+        window.chart_charts.changed_lines_by_author_by_date = new Highcharts.StockChart(options);
+
+          };
+                })()
+        </script>
+
+<div id="charts.changed_lines_by_author_by_date"></div>
+<small>
+<center>5 Chromium authors shown by company</center>
+</small>
+</div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

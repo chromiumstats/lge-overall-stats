@@ -179,7 +179,7 @@ a:hover {
 <td>200</td>
 <td>212</td>
 <td>227</td>
-<td>223</td>
+<td>224</td>
 </tr>
 <tr>
 <th>Percentage</th>
@@ -215,7 +215,7 @@ a:hover {
           var onload = window.onload;
           window.onload = function(){
             if (typeof onload == "function") onload();
-                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Hour" },"categories": "0..23" },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_hour","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by hour","data": [ 253,288,261,204,178,222,267,307,408,482,422,425,436,401,434,432,366,294,265,242,200,212,227,223 ] }] };
+                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Hour" },"categories": "0..23" },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_hour","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by hour","data": [ 253,288,261,204,178,222,267,307,408,482,422,425,436,401,434,432,366,294,265,242,200,212,227,224 ] }] };
         
         window.chart_charts.activity_by_hour = new Highcharts.Chart(options);
 
