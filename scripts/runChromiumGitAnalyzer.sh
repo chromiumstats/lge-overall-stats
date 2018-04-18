@@ -37,8 +37,8 @@ export BLOOMBERG_EMAIL="@bloomberg.net"
 export BRENDANLONG_EMAIL="@brendanlong.com"
 export COUNTER_EMAIL="@commit-counter.org"
 
-while :
-do
+#while :
+#do
     # Update Chromium source code.
     start_timestamp=$(date +"%T")
     timestamp=$start_timestamp
@@ -88,4 +88,4 @@ do
     echo "[$timestamp] Finish to upload new result!"
     echo "- StartTime: $start_timestamp"
     echo "- EndTime: $timestamp"
-done
+#done
