@@ -158,28 +158,28 @@ a:hover {
 <th>Commits</th>
 <td>24205</td>
 <td>21184</td>
-<td>17641</td>
+<td>17642</td>
 <td>15555</td>
 <td>14940</td>
 <td>14632</td>
 <td>15215</td>
-<td>16492</td>
-<td>18552</td>
-<td>20878</td>
-<td>22087</td>
-<td>23794</td>
-<td>23078</td>
-<td>24252</td>
-<td>25788</td>
-<td>27092</td>
-<td>28814</td>
-<td>29883</td>
-<td>28813</td>
-<td>27045</td>
-<td>26891</td>
-<td>26209</td>
-<td>25622</td>
-<td>24699</td>
+<td>16494</td>
+<td>18556</td>
+<td>20885</td>
+<td>22095</td>
+<td>23801</td>
+<td>23080</td>
+<td>24254</td>
+<td>25792</td>
+<td>27100</td>
+<td>28817</td>
+<td>29897</td>
+<td>28825</td>
+<td>27049</td>
+<td>26898</td>
+<td>26217</td>
+<td>25624</td>
+<td>24700</td>
 </tr>
 <tr>
 <th>Percentage</th>
@@ -215,7 +215,7 @@ a:hover {
           var onload = window.onload;
           window.onload = function(){
             if (typeof onload == "function") onload();
-                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Hour" },"categories": "0..23" },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_hour","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by hour","data": [ 24205,21184,17641,15555,14940,14632,15215,16492,18552,20878,22087,23794,23078,24252,25788,27092,28814,29883,28813,27045,26891,26209,25622,24699 ] }] };
+                    var options = { "title": { "text": "" },"legend": { "enabled": false },"xAxis": { "title": { "text": "Hour" },"categories": "0..23" },"yAxis": { "title": { "text": "Commits" },"labels": {  } },"tooltip": { "enabled": true },"credits": { "enabled": false },"plotOptions": { "areaspline": {  } },"chart": { "defaultSeriesType": "line","renderTo": "charts.activity_by_hour","type": "column" },"subtitle": {  },"series": [{ "name": "Commits by hour","data": [ 24205,21184,17642,15555,14940,14632,15215,16494,18556,20885,22095,23801,23080,24254,25792,27100,28817,29897,28825,27049,26898,26217,25624,24700 ] }] };
         
         window.chart_charts.activity_by_hour = new Highcharts.Chart(options);
 
