@@ -5,37 +5,39 @@ CHROMIUM_PATH=$HOME/chromium/Chromium
 OUTPUT_PATH=$HOME/github/cr-stats-per-company/cr-stats
 GIT_STATS_PATH=$HOME/github/cr-stats-per-company/cr-stats-tool/bin/git_stats
 
-export CHROMIUM_EMAIL="@chromium.org"
-export GOOGLE_EMAIL="@google.com"
-export WEBKIT_EMAIL="@webkit.org"
-export APPLE_EMAIL="@apple.com"
-export OPERA_EMAIL="@opera.com"
-export SAMSUNG_EMAIL="@samsung.com"
-export INTEL_EMAIL="@intel.com"
-export GMAIL_EMAIL="@gmail.com"
-export NOKIA_EMAIL="@nokia.com"
-export YANDEX_EMAIL="@yandex-team.ru"
-export IGALIA_EMAIL="@igalia.com"
-export ADOBE_EMAIL="@adobe.com"
-export AMAZON_EMAIL="@amazon.com"
-export NVIDIA_EMAIL="@nvidia.com"
-export NAVER_EMAIL="@navercorp.com"
+#export CHROMIUM_EMAIL="@chromium.org"
+#export GOOGLE_EMAIL="@google.com"
+#export WEBKIT_EMAIL="@webkit.org"
+#export APPLE_EMAIL="@apple.com"
+#export OPERA_EMAIL="@opera.com"
+#export SAMSUNG_EMAIL="@samsung.com"
+#export INTEL_EMAIL="@intel.com"
+#export GMAIL_EMAIL="@gmail.com"
+#export NOKIA_EMAIL="@nokia.com"
+#export YANDEX_EMAIL="@yandex-team.ru"
+#export IGALIA_EMAIL="@igalia.com"
+#export ADOBE_EMAIL="@adobe.com"
+#export AMAZON_EMAIL="@amazon.com"
+#export NVIDIA_EMAIL="@nvidia.com"
+#export NAVER_EMAIL="@navercorp.com"
 export LGE_EMAIL="@lge.com"
-export CISCO_EMAIL="@cisco.com"
-export TENCENT_EMAIL="@tencent.com"
-export ARM_EMAIL="@arm.com"
-export COLLABORA_EMAIL="@collabora.com"
-export NETFLIX_EMAIL="@netflix.com"
-export HUAWEI_EMAIL="@huawei.com"
-export IBM_EMAIL="@ca.ibm.com"
-export AMD_EMAIL="@amd.com"
-export IBM_EMAIL="@ca.ibm.com"
-export AKAMAI_EMAIL="@akamai.com"
-export CANONICAL_EMAIL="@canonical.com"
-export BLACKBERRY_EMAIL="@blackberry.com"
-export BLOOMBERG_EMAIL="@bloomberg.net"
-export BRENDANLONG_EMAIL="@brendanlong.com"
-export COUNTER_EMAIL="@commit-counter.org"
+#export CISCO_EMAIL="@cisco.com"
+#export TENCENT_EMAIL="@tencent.com"
+#export ARM_EMAIL="@arm.com"
+#export COLLABORA_EMAIL="@collabora.com"
+#export NETFLIX_EMAIL="@netflix.com"
+#export HUAWEI_EMAIL="@huawei.com"
+#export IBM_EMAIL="@ca.ibm.com"
+#export AMD_EMAIL="@amd.com"
+#export IBM_EMAIL="@ca.ibm.com"
+#export AKAMAI_EMAIL="@akamai.com"
+#export CANONICAL_EMAIL="@canonical.com"
+#export BLACKBERRY_EMAIL="@blackberry.com"
+#export BLOOMBERG_EMAIL="@bloomberg.net"
+#export BRENDANLONG_EMAIL="@brendanlong.com"
+#export COUNTER_EMAIL="@commit-counter.org"
+
+#        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\|$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$AKAMAI_EMAIL";
 
 #while :
 #do
@@ -51,7 +53,7 @@ export COUNTER_EMAIL="@commit-counter.org"
     git subtree add --prefix=v8-log https://chromium.googlesource.com/v8/v8.git master
     git subtree add --prefix=pdfium-log https://pdfium.googlesource.com/pdfium master
     git subtree add --prefix=angle-log https://chromium.googlesource.com/angle/angle.git master
-    git subtree add --prefix=buildtools-log https://chromium.googlesource.com/chromium/buildtools.git master
+    git subtree add --prefix=crashpad-log https://chromium.googlesource.com/crashpad/crashpad master
     timestamp=$(date +"%T")
     echo "[$timestamp] Finish to update Chromium."
 
@@ -60,7 +62,7 @@ export COUNTER_EMAIL="@commit-counter.org"
     timestamp=$(date +"%T")
     echo "[$timestamp] Starting checking company commits until $now, please wait..."
     git filter-branch -f --commit-filter '
-        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$CHROMIUM_EMAIL\|$GOOGLE_EMAIL\|$OPERA_EMAIL\|$SAMSUNG_EMAIL\|$INTEL_EMAIL\|$GMAIL_EMAIL\|$YANDEX_EMAIL\|$IGALIA_EMAIL\|$ADOBE_EMAIL\|$AMAZON_EMAIL\|$NVIDIA_EMAIL\|$NAVER_EMAIL\|$LGE_EMAIL\|$CISCO_EMAIL\|$TENCENT_EMAIL\|$ARM_EMAIL\|$COLLABORA_EMAIL\|$NETFLIX_EMAIL\|$HUAWEI_EMAIL\|$IBM_EMAIL\|$AMD_EMAIL\|$AKAMAI_EMAIL";
+        if echo "$GIT_AUTHOR_EMAIL" | grep -q "$LGE_EMAIL";
         then
             git commit-tree "$@";
         else
@@ -79,10 +81,10 @@ export COUNTER_EMAIL="@commit-counter.org"
     # Upload the result to github.
     cd $OUTPUT_PATH
     git add .
-    git commit -m "Update the new result by bot"
-    git fetch origin master
-    git rebase origin/master
-    git push origin master:master
+    git commit -m "Update the new result by bot (Only for LGE)"
+#    git fetch origin master
+#    git rebase origin/master
+# git push origin master:master
 
     timestamp=$(date +"%T")
     echo "[$timestamp] Finish to upload new result!"
